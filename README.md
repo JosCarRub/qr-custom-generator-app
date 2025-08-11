@@ -17,7 +17,7 @@
 <br>
 
 <div align="center">
-  <img src="public/social-preview.png" alt="QR Custom Generator - Vista Previa" width="100%"/>
+  <img src="/qr-generator-frontend/public/social-preview.png" alt="QR Custom Generator - Vista Previa" width="100%"/>
 </div>
 
 <br>
