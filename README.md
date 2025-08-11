@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/logo.svg" alt="QR Custom Generator" width="60" height="60"/>
+  <img src="/qr-generator-frontend/public/logo.svg" alt="QR Custom Generator" width="60" height="60"/>
   <h1>QR Custom Generator</h1>
   
   <a href="https://qr-custom-generator.vercel.app/" target="_blank">
