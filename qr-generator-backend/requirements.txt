@@ -1,0 +1,11 @@
+fastapi
+
+uvicorn[standard]
+
+qrcode[pil]
+
+python-multipart
+gunicorn
+
+pytest
+httpx

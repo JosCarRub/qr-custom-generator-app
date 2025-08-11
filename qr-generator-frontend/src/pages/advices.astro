@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout title="Consejos - QR Custom Generator">
+    <div class="fixed inset-0 qr-pattern pointer-events-none"></div>
+
+    <main class="relative z-10 flex flex-col min-h-screen w-full">
+        
+        <div class="flex-1 flex items-center justify-center">
+            <div class="w-full max-w-4xl 2xl:max-w-5xl mx-auto px-4 sm:px-6">
+
+                <div class="text-center mb-6 2xl:mb-16 animate-fade-in-up">
+                    <h1 class="text-4xl 2xl:text-5xl font-extrabold tracking-tighter text-slate-100">
+                        Consejos para un <span class="text-gradient">QR perfecto</span>
+                    </h1>
+                    <p class="text-base 2xl:text-lg text-slate-400 mt-4 max-w-2xl mx-auto">
+                        Maximiza la efectividad de tus códigos QR con estas buenas prácticas.
+                    </p>
+                </div>
+
+                <div class="space-y-6 2xl:space-y-8">
+                    <div class="flex gap-4 2xl:gap-6 animate-fade-in-up" style="animation-delay: 200ms;">
+                        <div class="text-5xl 2xl:text-7xl font-bold text-gradient leading-none">1</div>
+                        <div>
+                            <h3 class="font-semibold text-lg 2xl:text-xl text-slate-200 mb-1 2xl:mb-2">El contraste es el rey</h3>
+                            <p class="text-sm 2xl:text-base text-slate-400 leading-relaxed">Un alto contraste entre el color principal y el fondo es crucial. Nuestra herramienta te ayuda, pero prioriza siempre fondos claros para máxima compatibilidad.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 2xl:gap-6 animate-fade-in-up" style="animation-delay: 300ms;">
+                        <div class="text-5xl 2xl:text-7xl font-bold text-gradient leading-none">2</div>
+                        <div>
+                            <h3 class="font-semibold text-lg 2xl:text-xl text-slate-200 mb-1 2xl:mb-2">Menos siempre es más</h3>
+                            <p class="text-sm 2xl:text-base text-slate-400 leading-relaxed">Las URLs cortas generan QRs más simples y fáciles de escanear. Considera usar acortadores de URL para enlaces muy largos.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 2xl:gap-6 animate-fade-in-up" style="animation-delay: 400ms;">
+                        <div class="text-5xl 2xl:text-7xl font-bold text-gradient leading-none">3</div>
+                        <div>
+                            <h3 class="font-semibold text-lg 2xl:text-xl text-slate-200 mb-1 2xl:mb-2">Tu logo, con cuidado</h3>
+                            <p class="text-sm 2xl:text-base text-slate-400 leading-relaxed">Añadir un logo es genial, pero asegúrate de que no tape áreas críticas. QR Custom Generator utiliza un corrector de errores, pero no es infalible.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 2xl:gap-6 animate-fade-in-up" style="animation-delay: 500ms;">
+                        <div class="text-5xl 2xl:text-7xl font-bold text-gradient leading-none">4</div>
+                        <div>
+                            <h3 class="font-semibold text-lg 2xl:text-xl text-slate-200 mb-1 2xl:mb-2">Usa un PNG transparente</h3>
+                            <p class="text-sm 2xl:text-base text-slate-400 leading-relaxed">Para obtener los mejores resultados, se recomienda utilizar un logo en formato PNG con fondo transparente. Esto asegura una integración limpia sobre tu QR.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 2xl:gap-6 animate-fade-in-up" style="animation-delay: 600ms;">
+                        <div class="text-5xl 2xl:text-7xl font-bold text-gradient leading-none">5</div>
+                        <div>
+                            <h3 class="font-semibold text-lg 2xl:text-xl text-slate-200 mb-1 2xl:mb-2">¡Escanea para probar!</h3>
+                            <p class="text-sm 2xl:text-base text-slate-400 leading-relaxed">Juega con los contrastes y diseños, pero siempre usa un escáner QR en tu móvil para cerciorarte de que funciona correctamente antes de usarlo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12 2xl:mt-16 animate-fade-in-up" style="animation-delay: 700ms;">
+                    <a href="/" class="inline-flex items-center gap-2 px-6 py-3 border border-slate-700/50 hover:bg-slate-800 text-slate-300 font-semibold rounded-lg transition-all duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        Volver al Generador
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-shrink-0 w-full">
+            <Footer />
+        </div>
+    </main>
+</Layout>
+
+<style is:global>
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up {
+        animation: fadeInUp 0.7s ease-out forwards;
+        opacity: 0;
+    }
+</style>

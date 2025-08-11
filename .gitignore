@@ -1,0 +1,56 @@
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración de IDEs y editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de logs genéricos
+*.log
+
+
+.env
+.env.*
+!.env.example
+
+
+# ##################################### #
+#     FRONTEND                          #
+# ##################################### #
+
+# Directorio de salida de la compilación de Astro
+/qr-generator-frontend/dist/
+
+# Dependencias de Node.js
+/qr-generator-frontend/node_modules/
+
+# Archivos generados por Astro
+/qr-generator-frontend/.astro/
+
+# Logs específicos de gestores de paquetes de Node
+/qr-generator-frontend/npm-debug.log*
+/qr-generator-frontend/yarn-debug.log*
+/qr-generator-frontend/yarn-error.log*
+/qr-generator-frontend/pnpm-debug.log*
+
+
+# ##################################### #
+#      BACKEND                          #
+# ##################################### #
+
+# Entorno virtual de Python
+/qr-generator-backend/venv/
+/qr-generator-backend/env/
+
+# Archivos compilados y caché de Python
+/qr-generator-backend/__pycache__/
+/qr-generator-backend/*.py[cod]
+/qr-generator-backend/*$py.class
+
+# Archivos de testing de Pytest
+/qr-generator-backend/.pytest_cache/
+/qr-generator-backend/.coverage
+/qr-generator-backend/htmlcov/

@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import QRGenerator from '../components/QRGenerator.jsx';
+import Footer from '../components/Footer.astro';
+import AdviceLink from '../components/AdviceLink.astro';
+---
+<Layout title="QR Custom Generator - Professional Tool">
+    <div class="fixed inset-0 qr-pattern pointer-events-none"></div>
+
+    <main class="relative z-10 flex flex-col min-h-screen w-full">
+        
+        <div class="flex-1 flex flex-col items-center justify-center">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6">
+                <Hero />
+                <div class="text-center -mt-6 mb-6 2xl:-mt-8 2xl:mb-8">
+                    <AdviceLink />
+                </div>
+                <QRGenerator client:load /> 
+            </div>
+        </div>
+
+        <div class="flex-shrink-0 w-full">
+            <Footer />
+        </div>
+    </main>
+</Layout>

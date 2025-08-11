@@ -1,0 +1,168 @@
+<div class="mb-8 animate-fade-in-up" style="animation-delay: 100ms;">
+    <a 
+        href="/advices" 
+        class="qr-advice-button group"
+    >
+        <svg class="qr-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+        </svg>
+        
+        <span class="qr-text">
+            Consejos
+        </span>
+        
+        <div class="click-indicator"></div>
+
+        <div class="press-effect"></div>
+    </a>
+</div>
+
+<style is:global>
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-fade-in-up {
+        animation: fadeInUp 0.7s ease-out forwards;
+        opacity: 0;
+    }
+
+    .qr-advice-button {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 20px;
+        text-decoration: none;
+        background: linear-gradient(135deg, rgba(51, 65, 85, 0.6), rgba(30, 41, 59, 0.4));
+        border: 1px solid rgba(245, 191, 137, 0.4);
+        border-radius: 9999px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+        cursor: pointer;
+        
+        box-shadow: 
+            0 2px 8px rgba(0, 0, 0, 0.15),
+            0 1px 3px rgba(0, 0, 0, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .qr-advice-button:hover {
+        transform: translateY(-3px);
+        background: linear-gradient(135deg, rgba(51, 65, 85, 0.7), rgba(30, 41, 59, 0.5));
+        border-color: rgba(71, 85, 105, 0.6);
+        box-shadow: 
+            0 6px 20px rgba(0, 0, 0, 0.2),
+            0 3px 8px rgba(0, 0, 0, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .qr-advice-button:active {
+        transform: translateY(-1px);
+        transition-duration: 0.1s;
+        box-shadow: 
+            0 3px 12px rgba(0, 0, 0, 0.18),
+            0 1px 4px rgba(0, 0, 0, 0.12),
+            inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    .qr-icon {
+        width: 20px;
+        height: 20px;
+        color: #fbbf24;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        flex-shrink: 0;
+    }
+
+    .qr-advice-button:hover .qr-icon {
+        transform: scale(1.1);
+        color: #f59e0b;
+    }
+
+    .qr-advice-button:active .qr-icon {
+        transform: scale(1.05);
+    }
+
+    .qr-text {
+        font-size: 14px;
+        font-weight: 500;
+        color: #cbd5e1;
+        transition: color 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .qr-advice-button:hover .qr-text {
+        color: #f8fafc;
+    }
+
+    
+
+    .press-effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+        opacity: 0;
+        transform: scale(0.8);
+        transition: all 0.2s ease;
+        pointer-events: none;
+        border-radius: 9999px;
+    }
+
+    .qr-advice-button:active .press-effect {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+
+    .qr-advice-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 9999px;
+        padding: 1px;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), transparent 50%, rgba(59, 130, 246, 0.1));
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: xor;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .qr-advice-button:hover::before {
+        opacity: 1;
+    }
+
+    .qr-advice-button {
+        will-change: transform, box-shadow;
+    }
+
+    .qr-icon, .qr-text, .click-indicator {
+        will-change: transform, color;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .qr-advice-button, .qr-icon, .qr-text, .click-indicator, .press-effect, .animate-fade-in-up {
+            transition: none;
+            animation: none;
+        }
+        
+        .qr-advice-button:hover, .qr-advice-button:active {
+            transform: none;
+        }
+        
+        .qr-advice-button:hover .qr-icon {
+            transform: none;
+        }
+    }
+
+    .qr-advice-button:focus-visible {
+        outline: 2px solid rgba(59, 130, 246, 0.6);
+        outline-offset: 2px;
+    }
+</style>
